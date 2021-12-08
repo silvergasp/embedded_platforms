@@ -1,2 +1,4 @@
 # embedded_platforms
-Highly experimental do not depend on this
+This is currently a sandbox for testing purposes only.
+
+**DO NOT DEPEND ON THIS**.

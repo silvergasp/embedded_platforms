@@ -1,0 +1,38 @@
+package(default_visibility = ["//visibility:public"])
+
+constraint_setting(
+    name = "fpu",
+)
+
+################################# ARM FPU's ###################################
+# Constraint values are from gcc online docs,
+# http://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html, -mfpu= docs.
+
+ARM_FPUS = [
+    "vfpv2",
+    "vfpv3",
+    "vfpv3_fp16",
+    "vfpv3_d16",
+    "vfpv3_d16_fp16",
+    "vfpv3xd",
+    "vfpv3xd_fp16",
+    "neon_vfpv3",
+    "neon_fp16",
+    "vfpv4",
+    "vfpv4_d16",
+    "fpv4_sp_d16",
+    "neon_vfpv4",
+    "fpv5_d16",
+    "fpv5_sp_d16",
+    "fp_armv8",
+    "neon_fp_armv8",
+    "crypto_neon_fp_armv8",
+]
+
+[
+    constraint_value(
+        name = fpu,
+        constraint_setting = ":fpu",
+    )
+    for fpu in ARM_FPUS
+]
