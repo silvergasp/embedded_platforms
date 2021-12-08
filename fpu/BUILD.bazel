@@ -1,6 +1,20 @@
 package(default_visibility = ["//visibility:public"])
 
 constraint_setting(
+    name = "float_abi",
+)
+
+constraint_value(
+    name = "soft",
+    constraint_setting = ":float_abi",
+)
+
+constraint_value(
+    name = "hard",
+    constraint_setting = ":float_abi",
+)
+
+constraint_setting(
     name = "fpu",
 )
 
