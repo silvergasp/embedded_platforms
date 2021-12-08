@@ -4,6 +4,11 @@ constraint_setting(
     name = "fpu",
 )
 
+constraint_value(
+    name = "none",
+    constraint_setting = ":fpu",
+)
+
 ################################# ARM FPU's ###################################
 # Constraint values are from gcc online docs,
 # http://gcc.gnu.org/onlinedocs/gcc/ARM-Options.html, -mfpu= docs.
